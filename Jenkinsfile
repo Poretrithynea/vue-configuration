@@ -8,7 +8,7 @@ node {
                 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
                     withCredentials([usernamePassword(credentialsId: 'github5', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                         sh 'git config user.email poretrithynea@gmail.com'
-                        sh 'git config user.name poretrithynea'
+                        sh 'git config user.name Poretrithynea'
                         sh 'cat vue-deployment.yml'
                         sh "sed -i 's+poretrithynea/vueminiproject.*+poretrithynea/vueminiproject:${DOCKERTAG}+g' vue-deployment.yml"
                         sh 'cat vue-deployment.yml'
