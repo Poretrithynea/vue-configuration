@@ -7,6 +7,7 @@ metadata:
 spec:
   ports:
     - port: 8080
+      nodePort: 32302
   selector:
     app: vuejs
     tier: frontend
@@ -19,6 +20,7 @@ metadata:
   labels:
     app: vuejs
 spec:
+  replicas: 2
   selector:
     matchLabels:
       app: vuejs
