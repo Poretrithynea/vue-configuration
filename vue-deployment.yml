@@ -32,7 +32,7 @@ spec:
         tier: frontend
     spec:
       containers:
-      - image: poretrithynea/vueminiproject:12
+      - image: poretrithynea/vueminiproject:13
         name: vuejs
         env:
         ports:
